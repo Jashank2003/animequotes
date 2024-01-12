@@ -17,5 +17,5 @@ AnimeQuotes is a React project created for anime fans. This project utilizes the
 
 ## Demo
 
-A live demo of the AniChan project can be found [here]([click here](https://jashank2003.github.io/anichan/).
+A live demo of the AniChan project can be found [here]([click here](https://animequotes-e8ifm3s7u-jashank2003.vercel.app/).
 
