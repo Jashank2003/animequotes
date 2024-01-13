@@ -25,11 +25,27 @@ export default function Section(props) {
     // console.log(inputValue);
     //  let url = `/apii/api/random/${props.url}=${setti.value}`;
     let url = `https://animechan.xyz/api/random/${props.url}=${inputValue}`;
-    let data = await fetch(url);
-    let parseData = await data.json();
-    setquote(parseData.quote);
-    setAnime(parseData.anime);
-    setcharacter(parseData.character);
+    try {
+      let data = await fetch(url);
+  
+      if (data.ok) {
+        let parseData = await data.json();
+        setquote(parseData.quote);
+        setAnime(parseData.anime);
+        setcharacter(parseData.character);
+      } else {
+        // Handle the case where the response is not okay (e.g., 404 or 401)
+        setquote("Nothing found:< | Make sure Spelling is correct");
+        setAnime("");
+        setcharacter("");
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Error fetching data:", error);
+      setquote("Error fetching data");
+      setAnime("");
+      setcharacter("");
+    }
     noloader();
   };
 
