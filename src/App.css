@@ -79,7 +79,7 @@ body{
 @media only screen and (min-width:300px) and (max-width:1080px){
 
   .navbar ul li a{
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   
