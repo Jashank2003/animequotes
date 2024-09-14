@@ -27,15 +27,12 @@ export default function Random() {
    const updatequote = async () => {
     // runs after rendering
     showloader();
-    // let url = `/apii/api/random`;
-     let url = `https://animechan.xyz/api/random`;
-
-    // let proxyUrl = "https://cors-anywhere.herokuapp.com/";
-    // let apiUrl = "https://animechan.xyz/api/random";
-    // let url = proxyUrl + apiUrl;
-    //
+  
+     let url = `https://animequotes-bcknd.onrender.com/api/quotes/random`;
     let data = await fetch(url);
     let parseData = await data.json(); 
+    
+
     setquote(parseData.quote);
     setAnime(parseData.anime);
     setcharacter(parseData.character);

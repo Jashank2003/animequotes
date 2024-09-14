@@ -15,11 +15,11 @@ function App() {
    </div>
    <div id='animetitle'>
 
-      <Section box="tibox" wind="animetitile" head="Title" url="anime?title"/>
+      <Section box="tibox" wind="animetitile" head="Title" url="anime"/>
    </div>
    <div id='animechar'>
 
-      <Section  box="charbox" wind="animechar" head="Character" url="character?name"/>
+      <Section  box="charbox" wind="animechar" head="Character" url="character"/>
    </div>
    </>
   );

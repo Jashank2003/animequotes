@@ -19,12 +19,10 @@ export default function Section(props) {
   };
 
   const updatequote = async () => {
-    // runs after rendering
+    
     showloader();
-    // const setti = document.getElementById("searchar");
-    // console.log(inputValue);
-    //  let url = `/apii/api/random/${props.url}=${setti.value}`;
-    let url = `https://animechan.xyz/api/random/${props.url}=${inputValue}`;
+   
+    let url = `https://animequotes-bcknd.onrender.com/api/quotes/random/${props.url}/${inputValue}`;
     try {
       let data = await fetch(url);
   
